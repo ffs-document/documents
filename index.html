@@ -310,15 +310,34 @@
                         // รูปแบบ: สมช. 1001/2569
                         let displayDocId = rawDept ? `${rawDept}. ${record.docId || '-'}` : record.docId || '-';
 
+                        // จัดการปุ่ม PDF และแปลงลิงก์ Google Drive
                         let pdfButtonsHTML = '';
                         if (record.pdfLink && record.pdfLink !== "-" && record.pdfLink.includes("http")) {
+                            
+                            // ลิงก์สำหรับดูตัวอย่าง (เปิดหน้าเดิม)
+                            let previewLink = record.pdfLink;
+                            // ลิงก์สำหรับดาวน์โหลด
+                            let downloadLink = record.pdfLink;
+
+                            // ⚡ ทริคพิเศษ: ถ้าเป็นลิงก์ Google Drive ให้แปลงเป็นแบบ Direct Download
+                            if (record.pdfLink.includes("drive.google.com/file/d/")) {
+                                const fileIdMatch = record.pdfLink.match(/\/d\/(.+?)\//);
+                                if (fileIdMatch && fileIdMatch[1]) {
+                                    const fileId = fileIdMatch[1];
+                                    // สร้างลิงก์บังคับดาวน์โหลดของ Google Drive
+                                    downloadLink = `https://drive.google.com/uc?export=download&id=${fileId}`;
+                                    // สำหรับดูตัวอย่าง ให้ใช้ลิงก์ preview
+                                    previewLink = `https://drive.google.com/file/d/${fileId}/view`;
+                                }
+                            }
+
                             pdfButtonsHTML = `
                             <div class="mt-6 pt-4 border-t border-gray-100 flex flex-wrap gap-3">
-                                <a href="${record.pdfLink}" target="_blank" class="bg-orange-50 hover:bg-orange-100 text-orange-600 font-medium px-4 py-2 rounded-lg text-xs flex items-center transition-all">
+                                <a href="${previewLink}" target="_blank" class="bg-orange-50 hover:bg-orange-100 text-orange-600 font-medium px-4 py-2 rounded-lg text-xs flex items-center transition-all">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
                                     ดูตัวอย่างเอกสาร
                                 </a>
-                                <a href="${record.pdfLink}" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white font-medium px-4 py-2 rounded-lg text-xs flex items-center shadow-xs transition-all">
+                                <a href="${downloadLink}" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white font-medium px-4 py-2 rounded-lg text-xs flex items-center shadow-xs transition-all">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
                                     ดาวน์โหลด PDF
                                 </a>
