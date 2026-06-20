@@ -43,7 +43,7 @@
                             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
-                        <span id="loginBtnText">กดเข้าสู่ระบบ</span>
+                        <span id="loginBtnText">เข้าสู่ระบบ</span>
                     </button>
                 </div>
             </div>
@@ -88,32 +88,33 @@
                     <div class="w-full sm:w-1/4">
                         <select id="docDepartment" class="block w-full px-3 py-2.5 border border-gray-300 rounded-xl bg-gray-50 text-gray-900 text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none transition-all cursor-pointer">
                             <option value="">ทุกฝ่าย (All)</option>
-                            <option value="สมช">สมช.</option>
-                            <option value="สธส">สธส.</option>
-                            <option value="วนธ">วนธ.</option>
-                            <option value="กษส">กษส.</option>
-                            <option value="ชสพ">ชสพ.</option>
-                            <option value="กกส">กกส.</option>
-                            <option value="ศสพ">ศสพ.</option>
-                            <option value="อกป">อกป.</option>
+                            <option value="อสพ">เอกสารสัมพันธ์ (อสพ.)</option>
+                            <option value="สมช">ฝ่ายสมาชิกสัมพันธ์ (สมช.)</option>
+                            <option value="สธส">ฝ่ายสาธารณสุขสัมพันธ์ (สธส.)</option>
+                            <option value="วนธ">ฝ่ายวัฒนธรรม (วนธ.)</option>
+                            <option value="กษส">ฝ่ายเกษตรสัมพันธ์ (กษส.)</option>
+                            <option value="ชสพ">ฝ่ายชุมชนสัมพันธ์ (ชสพ.)</option>
+                            <option value="กกส">ฝ่ายกิจกรรมสัมพันธ์ (กกส.)</option>
+                            <option value="ศสพ">ฝ่ายศึกษาสัมพันธ์ (ศสพ.)</option>
+                            <option value="อกป">ฝ่ายอำนวยการและปฏิสัมพันธ์ (อกป.)</option>
                         </select>
                     </div>
-                
+
                     <div class="w-full sm:w-1/4">
-                    <select id="docCategory" class="block w-full px-3 py-2.5 border border-gray-300 rounded-xl bg-gray-50 text-gray-900 text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none transition-all cursor-pointer">
-                        <option value="">ทุกหมวด (All)</option>
-                        <option value="01">01</option>
-                        <option value="02">02</option>
-                        <option value="03">03</option>
-                        <option value="04">04</option>
-                        <option value="05">05</option>
-                        <option value="06">06</option>
-                        <option value="07">07</option>
-                        <option value="08">08</option>
-                        <option value="09">09</option>
-                    </select>
-                </div>
-                
+                        <select id="docCategory" class="block w-full px-3 py-2.5 border border-gray-300 rounded-xl bg-gray-50 text-gray-900 text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none transition-all cursor-pointer">
+                            <option value="">ทุกหมวด (All)</option>
+                            <option value="01">01 - ทั่วไป</option>
+                            <option value="02">02 - รับรองการทำกิจกรรม</option>
+                            <option value="03">03 - รับรองสมาชิก</option>
+                            <option value="04">04 - ลาเรียน</option>
+                            <option value="05">05 - เยี่ยมชม</option>
+                            <option value="06">06 - ขอข้อมูล</option>
+                            <option value="07">07 - ขอเข้าพบ</option>
+                            <option value="08">08 - ประชาสัมพันธ์</option>
+                            <option value="09">09 - ขอเชิญเข้าร่วม</option>
+                        </select>
+                    </div>
+
                     <div class="relative flex-grow">
                         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -122,7 +123,7 @@
                         </div>
                         <input type="text" id="docSearchInput" placeholder="พิมพ์เลขเอกสาร, ชื่อเรื่อง..." class="block w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-xl bg-gray-50 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-sm transition-all">
                     </div>
-                
+
                     <button id="searchBtn" onclick="searchDocument()" class="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 active:scale-[0.99] disabled:opacity-70 disabled:cursor-not-allowed text-white font-medium px-6 py-2.5 rounded-xl text-sm transition-all flex items-center justify-center space-x-2 shadow-xs cursor-pointer">
                         <svg id="searchSpinner" class="hidden animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -139,11 +140,11 @@
                         </svg>
                         ค้นหาแบบรวดเร็ว:
                     </span>
-                    <button onclick="fillAndSearch('1001/2569')" class="bg-gray-100 hover:bg-orange-50 hover:text-orange-600 border border-gray-200 hover:border-orange-200 text-gray-600 px-2 py-1 rounded-md transition-all cursor-pointer">
-                        1001/2569
+                    <button onclick="fillAndSearch('ลาเรียน')" class="bg-gray-100 hover:bg-orange-50 hover:text-orange-600 border border-gray-200 hover:border-orange-200 text-gray-600 px-2 py-1 rounded-md transition-all cursor-pointer">
+                        หมวดลาเรียน
                     </button>
-                    <button onclick="fillAndSearch('ประกาศ')" class="bg-gray-100 hover:bg-orange-50 hover:text-orange-600 border border-gray-200 hover:border-orange-200 text-gray-600 px-2 py-1 rounded-md transition-all cursor-pointer">
-                        หมวดประกาศ
+                    <button onclick="fillAndSearch('ขอข้อมูล')" class="bg-gray-100 hover:bg-orange-50 hover:text-orange-600 border border-gray-200 hover:border-orange-200 text-gray-600 px-2 py-1 rounded-md transition-all cursor-pointer">
+                        หมวดขอข้อมูล
                     </button>
                 </div>
                 
@@ -176,7 +177,25 @@
         const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyXf9K4sR3-wT5q2pfy8lv-e9brBVzteR7xQUvJzDBF1PZ8ZIPCKmp5SzgmwsqGonbLeQ/exec';
         let globalDocuments = [];
 
-        // ฟังก์ชันเข้าสู่ระบบ
+        // ข้อมูลพจนานุกรมแปลตัวย่อเป็นชื่อเต็ม
+        const deptNames = {
+            "อสพ": "เอกสารสัมพันธ์",
+            "สมช": "ฝ่ายสมาชิกสัมพันธ์",
+            "สธส": "ฝ่ายสาธารณสุขสัมพันธ์",
+            "วนธ": "ฝ่ายวัฒนธรรม",
+            "กษส": "ฝ่ายเกษตรสัมพันธ์",
+            "ชสพ": "ฝ่ายชุมชนสัมพันธ์",
+            "กกส": "ฝ่ายกิจกรรมสัมพันธ์",
+            "ศสพ": "ฝ่ายศึกษาสัมพันธ์",
+            "อกป": "ฝ่ายอำนวยการและปฏิสัมพันธ์"
+        };
+
+        const catNames = {
+            "01": "ทั่วไป", "02": "รับรองการทำกิจกรรม", "03": "รับรองสมาชิก",
+            "04": "ลาเรียน", "05": "เยี่ยมชม", "06": "ขอข้อมูล",
+            "07": "ขอเข้าพบ", "08": "ประชาสัมพันธ์", "09": "ขอเชิญเข้าร่วม"
+        };
+
         async function handleLogin() {
             const userInput = document.getElementById('userInput').value.trim().toLowerCase();
             const passwordInput = document.getElementById('passwordInput').value.trim();
@@ -191,7 +210,6 @@
                 return;
             }
 
-            // แสดง Loading Spinner
             loginBtn.disabled = true;
             loginSpinner.classList.remove('hidden');
             loginBtnText.innerText = 'กำลังเชื่อมต่อ...';
@@ -219,142 +237,153 @@
             } finally {
                 loginBtn.disabled = false;
                 loginSpinner.classList.add('hidden');
-                loginBtnText.innerText = 'เข้าสู่ระบบความปลอดภัย';
+                loginBtnText.innerText = 'เข้าสู่ระบบ';
             }
         }
 
-        // ฟังก์ชันออกจากระบบ
-        function handleLogout() {
-            location.reload(); 
-        }
-
-        // ฟังก์ชันปุ่มกดค้นหาเร็ว
+        function handleLogout() { location.reload(); }
         function fillAndSearch(keyword) {
             document.getElementById('docSearchInput').value = keyword;
             searchDocument();
         }
 
-        // ฟังก์ชันค้นหาเอกสาร
         function searchDocument() {
-        const searchKey = document.getElementById('docSearchInput').value.trim().toLowerCase();
-        const category = document.getElementById('docCategory').value;
-        const department = document.getElementById('docDepartment').value; // เพิ่มตัวแปรดึงค่าจากฝ่าย
-        
-        const searchBtn = document.getElementById('searchBtn');
-        const searchSpinner = document.getElementById('searchSpinner');
-        const searchBtnText = document.getElementById('searchBtnText');
-        
-        const errorAlert = document.getElementById('errorAlert');
-        const placeholderState = document.getElementById('placeholderState');
-        const resultsContainer = document.getElementById('resultsContainer');
-    
-        if(!searchKey && !category && !department) {
-            alert("กรุณากรอกคำค้นหา หรือเลือกหมวดหมู่/ฝ่าย");
-            return;
-        }
-    
-        searchBtn.disabled = true;
-        searchSpinner.classList.remove('hidden');
-        searchBtnText.innerText = 'ค้นหา...';
-    
-        setTimeout(() => {
-            // กรองข้อมูล: ต้องตรงกับคำค้นหา AND ตรงกับหมวด AND ตรงกับฝ่าย
-            const filteredDocs = globalDocuments.filter(doc => {
-                const matchKey = searchKey === "" || 
-                                 String(doc.docId).toLowerCase().includes(searchKey) || 
-                                 String(doc.title).toLowerCase().includes(searchKey) || 
-                                 String(doc.department).toLowerCase().includes(searchKey) ||
-                                 String(doc.coordinator).toLowerCase().includes(searchKey);
-                
-                const matchCat = category === "" || String(doc.category).includes(category);
-                
-                // เช็กฝ่ายจากคอลัมน์ ฝ่าย (department) หรือใน เลขเอกสาร (docId) ก็ได้
-                const matchDept = department === "" || 
-                                  String(doc.department).includes(department) || 
-                                  String(doc.docId).includes(department); 
-                
-                return matchKey && matchCat && matchDept;
-            });
-    
-            resultsContainer.innerHTML = ''; 
-    
-            if (filteredDocs.length > 0) {
-                filteredDocs.forEach(record => {
+            const searchKey = document.getElementById('docSearchInput').value.trim().toLowerCase();
+            const category = document.getElementById('docCategory').value;
+            const department = document.getElementById('docDepartment').value;
+            
+            const searchBtn = document.getElementById('searchBtn');
+            const searchSpinner = document.getElementById('searchSpinner');
+            const searchBtnText = document.getElementById('searchBtnText');
+            
+            const errorAlert = document.getElementById('errorAlert');
+            const placeholderState = document.getElementById('placeholderState');
+            const resultsContainer = document.getElementById('resultsContainer');
+
+            if(!searchKey && !category && !department) {
+                alert("กรุณากรอกคำค้นหา หรือเลือกหมวดหมู่/ฝ่าย ก่อนครับ");
+                return;
+            }
+
+            searchBtn.disabled = true;
+            searchSpinner.classList.remove('hidden');
+            searchBtnText.innerText = 'ค้นหา...';
+
+            setTimeout(() => {
+                const filteredDocs = globalDocuments.filter(doc => {
+                    // แปลงค่าเพื่อช่วยในการค้นหา
+                    const rawDept = String(doc.department).replace('.', '').trim();
+                    const fullDept = deptNames[rawDept] || "";
                     
-                    let pdfButtonsHTML = '';
-                    if (record.pdfLink && record.pdfLink !== "-" && record.pdfLink.includes("http")) {
-                        pdfButtonsHTML = `
-                        <div class="mt-6 pt-4 border-t border-gray-100 flex flex-wrap gap-3">
-                            <a href="${record.pdfLink}" target="_blank" class="bg-orange-50 hover:bg-orange-100 text-orange-600 font-medium px-4 py-2 rounded-lg text-xs flex items-center transition-all">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
-                                ดูตัวอย่างเอกสาร
-                            </a>
-                            <a href="${record.pdfLink}" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white font-medium px-4 py-2 rounded-lg text-xs flex items-center shadow-xs transition-all">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                                ดาวน์โหลด PDF
-                            </a>
-                        </div>`;
-                    }
-    
-                    const docHTML = `
-                    <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-xs mb-4 animate-fade-in">
-                        <div class="p-6 md:p-8 relative bg-white">
-                            <div class="flex flex-col md:flex-row justify-between items-start border-b border-gray-200 pb-4 mb-4 gap-4">
-                                <div>
-                                    <span class="text-xs font-bold text-orange-600 bg-orange-50 px-2 py-0.5 rounded uppercase mb-2 inline-block">หมวด: ${record.category || '-'}</span>
-                                    <h3 class="text-lg font-bold text-gray-900 mb-1">${record.title || '-'}</h3>
-                                    <div class="flex items-center gap-3 mt-1">
-                                        <p class="text-sm text-gray-600">เลขที่: <span class="font-mono font-bold text-gray-800">${record.docId || '-'}</span></p>
-                                        <span class="text-[10px] text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">ลำดับอ้างอิง: ${record.no}</span>
+                    let rawCat = String(doc.category).trim();
+                    if(rawCat && !isNaN(rawCat)) rawCat = rawCat.padStart(2, '0');
+                    const fullCat = catNames[rawCat] || "";
+
+                    const matchKey = searchKey === "" || 
+                                     String(doc.docId).toLowerCase().includes(searchKey) || 
+                                     String(doc.title).toLowerCase().includes(searchKey) || 
+                                     String(doc.department).toLowerCase().includes(searchKey) ||
+                                     fullDept.toLowerCase().includes(searchKey) ||
+                                     fullCat.toLowerCase().includes(searchKey) ||
+                                     String(doc.coordinator).toLowerCase().includes(searchKey);
+                    
+                    const matchCat = category === "" || rawCat.includes(category);
+                    const matchDept = department === "" || rawDept.includes(department) || String(doc.docId).includes(department); 
+                    
+                    return matchKey && matchCat && matchDept;
+                });
+
+                resultsContainer.innerHTML = ''; 
+
+                if (filteredDocs.length > 0) {
+                    filteredDocs.forEach(record => {
+                        
+                        // 1. จัดเตรียมข้อมูลหมวด (เช่น 01 - ทั่วไป)
+                        let rawCat = record.category ? String(record.category).trim() : '';
+                        if(rawCat && !isNaN(rawCat)) rawCat = rawCat.padStart(2, '0');
+                        let displayCategory = catNames[rawCat] ? `${rawCat} - ${catNames[rawCat]}` : record.category || '-';
+
+                        // 2. จัดเตรียมข้อมูลฝ่ายและเลขที่เอกสาร
+                        let rawDept = record.department ? String(record.department).replace('.', '').trim() : '';
+                        // รูปแบบ: ฝ่ายสมาชิกสัมพันธ์ (สมช.)
+                        let displayDepartment = deptNames[rawDept] ? `${deptNames[rawDept]} (${rawDept}.)` : record.department || '-';
+                        // รูปแบบ: สมช. 1001/2569
+                        let displayDocId = rawDept ? `${rawDept}. ${record.docId || '-'}` : record.docId || '-';
+
+                        let pdfButtonsHTML = '';
+                        if (record.pdfLink && record.pdfLink !== "-" && record.pdfLink.includes("http")) {
+                            pdfButtonsHTML = `
+                            <div class="mt-6 pt-4 border-t border-gray-100 flex flex-wrap gap-3">
+                                <a href="${record.pdfLink}" target="_blank" class="bg-orange-50 hover:bg-orange-100 text-orange-600 font-medium px-4 py-2 rounded-lg text-xs flex items-center transition-all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+                                    ดูตัวอย่างเอกสาร
+                                </a>
+                                <a href="${record.pdfLink}" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white font-medium px-4 py-2 rounded-lg text-xs flex items-center shadow-xs transition-all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                                    ดาวน์โหลด PDF
+                                </a>
+                            </div>`;
+                        }
+
+                        const docHTML = `
+                        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-xs mb-4 animate-fade-in">
+                            <div class="p-6 md:p-8 relative bg-white">
+                                <div class="flex flex-col md:flex-row justify-between items-start border-b border-gray-200 pb-4 mb-4 gap-4">
+                                    <div>
+                                        <span class="text-xs font-bold text-orange-600 bg-orange-50 px-2 py-0.5 rounded uppercase mb-2 inline-block">หมวด: ${displayCategory}</span>
+                                        <h3 class="text-lg font-bold text-gray-900 mb-1">เรื่อง ${record.title || '-'}</h3>
+                                        <div class="flex items-center gap-3 mt-1">
+                                            <p class="text-sm text-gray-600">เลขที่: <span class="font-mono font-bold text-gray-800">${displayDocId}</span></p>
+                                            <span class="text-[10px] text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">ลำดับอ้างอิง: ${record.no}</span>
+                                        </div>
+                                    </div>
+                                    <div class="text-left md:text-right text-xs shrink-0 bg-gray-50 p-2 rounded-lg border border-gray-100">
+                                        <p class="text-gray-400">วันที่ลงเอกสาร</p>
+                                        <p class="font-semibold text-gray-800">${record.date || '-'}</p>
                                     </div>
                                 </div>
-                                <div class="text-left md:text-right text-xs shrink-0 bg-gray-50 p-2 rounded-lg border border-gray-100">
-                                    <p class="text-gray-400">วันที่ลงเอกสาร</p>
-                                    <p class="font-semibold text-gray-800">${record.date || '-'}</p>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3 text-sm">
+                                    <div class="flex items-start border-b border-gray-50 pb-2">
+                                        <span class="text-gray-400 w-24 shrink-0">ฝ่าย:</span>
+                                        <span class="text-gray-800 font-medium">${displayDepartment}</span>
+                                    </div>
+                                    <div class="flex items-start border-b border-gray-50 pb-2">
+                                        <span class="text-gray-400 w-24 shrink-0">เรียน:</span>
+                                        <span class="text-gray-800 font-medium">${record.attention || '-'}</span>
+                                    </div>
+                                    <div class="flex items-start border-b border-gray-50 pb-2">
+                                        <span class="text-gray-400 w-24 shrink-0">ผู้ประสานงาน:</span>
+                                        <span class="text-gray-800">${record.coordinator || '-'}</span>
+                                    </div>
                                 </div>
+
+                                <div class="mt-4">
+                                    <span class="text-xs font-bold text-gray-800 block mb-2">เนื้อหา:</span>
+                                    <div class="bg-gray-50/70 p-4 rounded-xl border border-gray-200 text-gray-600 text-sm leading-relaxed">${record.content || '-'}</div>
+                                </div>
+
+                                ${pdfButtonsHTML}
                             </div>
-                            
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3 text-sm">
-                                <div class="flex items-start border-b border-gray-50 pb-2">
-                                    <span class="text-gray-400 w-24 shrink-0">ฝ่าย/แผนก:</span>
-                                    <span class="text-gray-800 font-medium">${record.department || '-'}</span>
-                                </div>
-                                <div class="flex items-start border-b border-gray-50 pb-2">
-                                    <span class="text-gray-400 w-24 shrink-0">เรียนถึง:</span>
-                                    <span class="text-gray-800 font-medium">${record.attention || '-'}</span>
-                                </div>
-                                <div class="flex items-start border-b border-gray-50 pb-2">
-                                    <span class="text-gray-400 w-24 shrink-0">ผู้ประสานงาน:</span>
-                                    <span class="text-gray-800">${record.coordinator || '-'}</span>
-                                </div>
-                            </div>
-    
-                            <div class="mt-4">
-                                <span class="text-xs font-bold text-gray-800 block mb-2">เนื้อหาโดยย่อ:</span>
-                                <div class="bg-gray-50/70 p-4 rounded-xl border border-gray-200 text-gray-600 text-sm leading-relaxed">${record.content || '-'}</div>
-                            </div>
-    
-                            ${pdfButtonsHTML}
-                        </div>
-                    </div>`;
-                    resultsContainer.insertAdjacentHTML('beforeend', docHTML);
-                });
-    
-                placeholderState.classList.add('hidden');
-                resultsContainer.classList.remove('hidden');
-                errorAlert.classList.add('hidden');
-            } else {
-                placeholderState.classList.add('hidden');
-                resultsContainer.classList.add('hidden');
-                errorAlert.classList.remove('hidden');
-            }
-    
-            searchBtn.disabled = false;
-            searchSpinner.classList.add('hidden');
-            searchBtnText.innerText = 'ค้นหา';
-    
-        }, 400); 
-    }
+                        </div>`;
+                        resultsContainer.insertAdjacentHTML('beforeend', docHTML);
+                    });
+
+                    placeholderState.classList.add('hidden');
+                    resultsContainer.classList.remove('hidden');
+                    errorAlert.classList.add('hidden');
+                } else {
+                    placeholderState.classList.add('hidden');
+                    resultsContainer.classList.add('hidden');
+                    errorAlert.classList.remove('hidden');
+                }
+
+                searchBtn.disabled = false;
+                searchSpinner.classList.add('hidden');
+                searchBtnText.innerText = 'ค้นหา';
+
+            }, 400); 
+        }
 
         document.getElementById('passwordInput').addEventListener('keypress', e => { if(e.key === 'Enter') handleLogin(); });
         document.getElementById('docSearchInput').addEventListener('keypress', e => { if(e.key === 'Enter') searchDocument(); });
