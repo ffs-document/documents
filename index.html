@@ -100,19 +100,19 @@
                     </div>
                 
                     <div class="w-full sm:w-1/4">
-                        <select id="docCategory" class="block w-full px-3 py-2.5 border border-gray-300 rounded-xl bg-gray-50 text-gray-900 text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none transition-all cursor-pointer">
-                            <option value="">ทุกหมวด (All)</option>
-                            <option value="ทั่วไป">01</option>
-                            <option value="รับรองการทำกิจกรรม">02</option>
-                            <option value="รับรองสมาชิก">03</option>
-                            <option value="ลาเรียน">04</option>
-                            <option value="เยี่ยมชม">05</option>
-                            <option value="ขอข้อมูล">06</option>
-                            <option value="ขอเข้าพบ">07</option>
-                            <option value="ประชาสัมพันธ์">08</option>
-                            <option value="ขอเชิญเข้าร่วม">09</option>
-                        </select>
-                    </div>
+                    <select id="docCategory" class="block w-full px-3 py-2.5 border border-gray-300 rounded-xl bg-gray-50 text-gray-900 text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none transition-all cursor-pointer">
+                        <option value="">ทุกหมวด (All)</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                    </select>
+                </div>
                 
                     <div class="relative flex-grow">
                         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
@@ -249,7 +249,7 @@
         const resultsContainer = document.getElementById('resultsContainer');
     
         if(!searchKey && !category && !department) {
-            alert("กรุณากรอกคำค้นหา หรือเลือกหมวดหมู่/ฝ่าย ก่อนครับ");
+            alert("กรุณากรอกคำค้นหา หรือเลือกหมวดหมู่/ฝ่าย");
             return;
         }
     
